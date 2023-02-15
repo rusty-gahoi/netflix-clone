@@ -1,0 +1,125 @@
+$bg: rgb(17, 17, 17);
+
+
+.banner{
+    height: 600px;
+    background-color: $bg;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+
+    &::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: $bg;
+        opacity: 0.4;
+    }
+
+    >h1, p{
+        width: 40%;
+        color: #ffffff;
+        z-index: 8;
+        opacity: 0.9;
+        margin: 6px 20px;
+    }
+    p{
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+
+    }
+
+    >div{
+        display: flex;
+        
+        
+        >button {
+            width: 160px;
+            padding: 0.8rem;
+            margin: 20px;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            outline: none;
+            border: none;
+            border-radius: 8px;
+            z-index: 8;
+
+            &:nth-child(even) {
+                background-color: rgb(70, 69, 69);
+                color: #ffffff;
+                
+            }
+
+            >svg {
+                font-size: 1.5rem;
+                margin: 0 8px;
+            }
+
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+.row {
+    padding: 1rem;
+    background-color: $bg;
+
+    > h2 {
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+    }
+
+    >div {
+        display: flex;
+        overflow-x: auto;
+        
+    }
+
+}
+
+.card {
+    width: 200px;
+    cursor: pointer;
+    margin: 0.2rem;
+    transition: transform 0.5s;
+
+    &:hover {
+        transform: translateY(-10px) scale(1.05);
+
+    }
+}
+
+.genrebox{
+    overflow-x: auto;
+    background-color: $bg;
+    display: flex;
+    height: 100px;
+    flex: 0%;
+    
+    >a {
+        background-color: white;
+        color: black;
+        min-width: 130px;
+        margin: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        transition: all 0.5s;
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
